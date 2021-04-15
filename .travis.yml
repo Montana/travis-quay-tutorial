@@ -1,0 +1,11 @@
+language: generic
+
+services:
+  - docker
+
+script:
+  - docker build -t quay.io/montana/travis-quay-tutorial:$TRAVIS_BRANCH -t quay.io/montana/travis-quay-tutorial:latest .
+
+deploy:
+  - provider: script
+    script: bash docker_push
