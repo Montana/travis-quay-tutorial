@@ -9,4 +9,3 @@ script:
 deploy:
   - provider: script
     script: bash docker_push
-    skip_cleanup: true
